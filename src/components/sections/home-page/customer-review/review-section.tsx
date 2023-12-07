@@ -14,16 +14,16 @@ export function ReviewSection() {
   };
 
   return (
-    <div className="px-24 py-16 flex flex-col mt-16 gap-8 bg-lightGray ">
-      <h1 className="text-5xl font-bold text-center">Customer Reviews</h1>
-      <div className="mt-24">
+    <div className="md:px-20 py-16 flex flex-col md:mt-16  mt-8 gap-8 bg-lightGray ">
+      <h1 className="header-one font-bold text-center">Customer Reviews</h1>
+      <div className="mt-6 md:mt-20">
         <Slider {...settings}>
           {reviews.map((review, index) => (
             <div key={index} className="">
-              <p className="text-2xl text-center mx-auto w-[80%]">
+              <p className="text-lg md:text-2xl text-center mx-auto w-[80%]">
                 {review.description}
               </p>
-              <h1 className="my-10 text-center">{review.name}</h1>
+              <h1 className="md:my-10 my-4 text-center">{review.name}</h1>
             </div>
           ))}
         </Slider>
@@ -31,5 +31,3 @@ export function ReviewSection() {
     </div>
   );
 }
-
-

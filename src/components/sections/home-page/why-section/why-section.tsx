@@ -5,9 +5,9 @@ import CustomButton from "../../../common/custom-button";
 
 export function WhySection() {
   return (
-    <div className="px-24 py-8 flex flex-col mt-16 gap-8">
-      <h1 className="text-5xl font-bold text-center">Why choose Meavitae?</h1>
-      <div className="flex flex-wrap gap-4 w-full mt-24">
+    <div className="md:px-20 px-6 py-8 flex flex-col md:mt-16 mt-8 gap-8">
+      <h1 className="header-one font-bold text-center">Why choose Meavitae?</h1>
+      <div className="flex flex-wrap gap-4 w-full md:mt-24 mt-8">
         {whyPoints.map((point, index) => (
           <WhyPoint
             title={point.title}

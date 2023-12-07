@@ -8,14 +8,14 @@ type whyPointProps = {
 
 function WhyPoint({ title, imgSrc, description }: whyPointProps) {
   return (
-    <div className="bg-lightGray p-8 flex flex-col gap-5 w-[32%]">
+    <div className="bg-lightGray md:p-8 p-4 flex flex-col gap-5 md:w-[32%] w-full">
       <div className="flex items-center justify-between">
-        <p className="text-2xl font-bold">{title}</p>
+        <p className="md:text-2xl text-lg  font-bold">{title}</p>
         <p>
           <img src={imgSrc} alt="point"></img>
         </p>
       </div>
-      <p className="text-xl">{description}</p>
+      <p className="md:text-xl">{description}</p>
     </div>
   );
 }

@@ -13,7 +13,7 @@ const CustomButton: React.FC<ButtonProp> = ({
     <button
       onClick={eventFunc}
       className={
-        "py-4 px-6 rounded-lg text-lg " +
+        "py-2 px-4 lg:py-3 lg:px-5 rounded-lg lg:text-lg  " +
         (background ? "bg-purple text-white" : "transparent")
       }
     >

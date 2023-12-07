@@ -8,12 +8,12 @@ type postProps = {
 
 function Post({ img, title, description }: postProps) {
   return (
-    <PostStyle className="w-[32%] flex flex-col">
+    <PostStyle className="md:w-[32%] flex flex-col">
       <div>
         <img src={img} alt={title} className="w-full" />
       </div>
-      <h1 className="text-2xl font-bold">{title}</h1>
-      <p className="text-lg">
+      <h1 className="md:text-2xl text-lg font-bold">{title}</h1>
+      <p className="md:text-lg">
         <span> {description}</span>
 
         <a href="/" className="text-purple decoration-none ml-2">

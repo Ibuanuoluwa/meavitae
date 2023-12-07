@@ -7,8 +7,8 @@ import appleBtn from "../../assets/icons/app-store-btn.svg";
 
 export function Footer() {
   return (
-    <div className="px-24 py-16 flex justify-between mt-16 gap-8 bg-lightGray">
-      <div className="w-[33%] flex flex-col gap-8">
+    <div className="md:px-20 md:py-16 px-6 py-8 flex md:flex-row flex-col-reverse md:justify-between mt-16 gap-8 bg-lightGray">
+      <div className="md:w-[33%] flex flex-col gap-8">
         <div>
           <img src={logo} alt="logo" />
         </div>
@@ -29,7 +29,7 @@ export function Footer() {
             <img src={twitterIcon} alt="twitter" />
           </div>
         </div>
-        <div className="flex gap-4 align-items-center mt-4">
+        <div className="flex gap-4 items-center mt-4">
           <button className="max-w-[35%] max-h-[45px]">
             <img src={googleBtn} alt="google play" className="w-full h-full" />
           </button>
@@ -38,7 +38,7 @@ export function Footer() {
           </button>
         </div>
       </div>
-      <div className="w-[33%]">
+      <div className="md:w-[33%]">
         <h1 className="text-2xl">Product Features</h1>
         <ul className="mt-6 flex flex-col gap-4">
           <li>
@@ -67,7 +67,7 @@ export function Footer() {
           </li>
         </ul>
       </div>
-      <div className="w-[33%]">
+      <div className="md:w-[33%]">
         <h1 className="text-2xl">Quick Links</h1>
         <ul className="mt-6 flex flex-col gap-4">
           <li>
