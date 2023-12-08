@@ -14,7 +14,7 @@ export function ReviewSection() {
   };
 
   return (
-    <div className="md:px-20 py-16 flex flex-col md:mt-16  mt-8 gap-8 bg-lightGray ">
+    <div className="md:px-20  md:py-16 py-8 px-6 flex flex-col md:mt-16  mt-8 gap-8 bg-lightGray ">
       <h1 className="header-one font-bold text-center">Customer Reviews</h1>
       <div className="mt-6 md:mt-20">
         <Slider {...settings}>

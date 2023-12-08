@@ -26,7 +26,7 @@ export function Navbar() {
       >
         <ul className="flex md:flex-row flex-col lg:gap-10 md:gap-3">
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="#">About</a>

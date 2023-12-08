@@ -17,22 +17,22 @@ export function FAQSection() {
     {
       question: "How do I get started with MeaVitae?",
       answer:
-        "MeaVitae is a life management platform that allows you to securely manage your assets, liabilities, contacts, and important documents in one place. It utilises advanced FIDO2 cryptographic hardware for security..",
+        "To start with MeaVitae, you can begin by formulating your will with asset, liability, and outgoing information. This enables you to manage your lifestyle conveniently, will, and related assets.",
     },
     {
       question: "Can I view my Net Worth and Estate Overview on MeaVitae?",
       answer:
-        "MeaVitae is a life management platform that allows you to securely manage your assets, liabilities, contacts, and important documents in one place. It utilises advanced FIDO2 cryptographic hardware for security..",
+        "Yes, MeaVitae visually represents your Net Worth, helping you budget for significant life events like property purchases or having children",
     },
     {
       question: "How do I create a will using MeaVitae?",
       answer:
-        "MeaVitae is a life management platform that allows you to securely manage your assets, liabilities, contacts, and important documents in one place. It utilises advanced FIDO2 cryptographic hardware for security..",
+        "MeaVitae offers a simple way to create a will tied to your list of assets. This ensures that your legacy is distributed according to your wishes. You can also create and securely execute contract templates.",
     },
     {
       question: "What is the Secure Digital Vault, and how does it work?",
       answer:
-        "MeaVitae is a life management platform that allows you to securely manage your assets, liabilities, contacts, and important documents in one place. It utilises advanced FIDO2 cryptographic hardware for security..",
+        "The Secure Digital Vault is an ultra-secure storage solution within MeaVitae where you can store confidential information, contracts, and letters. It allows you to manage your life's documents from anywhere.",
     },
   ];
 

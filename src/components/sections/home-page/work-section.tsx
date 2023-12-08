@@ -16,27 +16,27 @@ export function WorkSection() {
         <div className="md:w-[45%]">
           <img src={workImg} alt="work" />
         </div>
-        <div className="flex gap-8 md:w-[50%]">
+        <div className="flex md:gap-8 gap-3 md:w-[50%]">
           <div className="flex flex-col items-center mt-6 md:mt-0 ">
-            <div className="absolute z-0 mt-3">
+            <div className="absolute z-0 mt-3  ">
               <img src={stroke} alt="stroke" />
             </div>
-            <div className=" z-10">
-              <img src={pointOne} alt="one" />
+            <div className="z-10">
+              <img src={pointOne} alt="one" className="min-w-[38px]" />
             </div>
-            <div className="mt-[80px] z-10">
-              <img src={pointTwo} alt="two" />
+            <div className="md:mt-[78px] mt-[100px] z-10">
+              <img src={pointTwo} alt="two" className="min-w-[38px]" />
             </div>
-            <div className="mt-[80px] z-10">
-              <img src={pointThree} alt="three" />
+            <div className="md:mt-[78px] mt-[100px] z-10">
+              <img src={pointThree} alt="three" className="min-w-[38px]" />
             </div>
           </div>
-          <div className="flex flex-col gap-7 md:w-[80%]">
+          <div className="flex flex-col  lg:gap-11 gap-9 md:gap-5   md:w-[80%] mt-7 md:mt-0">
             <div>
               <h1 className="md:text-2xl text-lg font-bold">
                 Secure Hardware Key
               </h1>
-              <p className="md:text-lg mt-3">
+              <p className="md:text-lg md:mt-3 mt-2">
                 Store all your vital information in an impenetrable fortress,
                 accessible only by you
               </p>
@@ -45,14 +45,14 @@ export function WorkSection() {
               <h1 className="md:text-2xl text-lg font-bold">
                 Life Management Tools
               </h1>
-              <p className="md:text-lg mt-3">
+              <p className="md:text-lg md:mt-3 mt-2">
                 Manage your finances, create a will, and be prepared for the
                 unexpected
               </p>
             </div>
             <div>
               <h1 className="md:text-2xl text-lg font-bold">Expert Guidance</h1>
-              <p className="nd:text-lg mt-3">
+              <p className="nd:text-lg md:mt-3 mt-2">
                 Communicate securely with financial and legal experts and
                 receive personalised recommendations for your matters
               </p>

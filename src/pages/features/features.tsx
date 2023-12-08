@@ -1,6 +1,12 @@
 import {
   FeatureHeroSection,
   FeatureOne,
+  FeatureTwo,
+  FeatureThree,
+  FeatureFour,
+  FeatureFive,
+  FeatureSix,
+  FeatureSeven,
 } from "../../components/sections/features-page";
 
 export function Features() {
@@ -8,6 +14,12 @@ export function Features() {
     <div>
       <FeatureHeroSection />
       <FeatureOne />
+      <FeatureTwo />
+      <FeatureThree />
+      <FeatureFour />
+      <FeatureFive />
+      <FeatureSix />
+      <FeatureSeven />
     </div>
   );
 }
