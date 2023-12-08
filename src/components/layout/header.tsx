@@ -10,7 +10,11 @@ export function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between lg:px-20 px-6 md:py-3 py-2 lg:text-lg bg-lightPurple sticky top-0 z-50">
+    <nav
+      className={`flex items-center justify-between lg:px-20 px-6 md:py-3 py-2 lg:text-lg  sticky top-0 z-50 ${
+        window.location.pathname === "/" ? "bg-lightPurple" : "bg-white"
+      }`}
+    >
       <div className="h-[50px] w-[100px] md:w-[150px] md:h-[50px]">
         <img src={logo} alt="logo" className="w-full h-full" />
       </div>
@@ -91,9 +95,10 @@ const NavElements = styled.div`
     .feature-menu {
       display: block;
       position: absolute;
-      top: 80px;
+      top: 70px;
       right: 40px;
       visibility: hidden;
+      transition: all 0.3s ease-in-out;
     }
     &:hover {
       .feature-menu {
