@@ -4,6 +4,7 @@ import rightArrow from "../../assets/icons/right-arrow.svg";
 import CustomButton from "../common/custom-button";
 import styled from "styled-components";
 import menu from "../../assets/icons/menu.svg";
+import FeatureMenu from "../common/feature-menu";
 
 export function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,11 +21,11 @@ export function Navbar() {
         <img src={menu} alt="menu" />
       </button>
       <NavElements
-        className={`md:flex lg:w-[65%] justify-between items-center  ${
+        className={`md:flex lg:w-[65%] xl:w-[70%] justify-between items-center  ${
           showMenu && "active"
         } `}
       >
-        <ul className="flex md:flex-row flex-col lg:gap-10 md:gap-3">
+        <ul className="flex md:flex-row flex-col lg:gap-10 md:gap-3 xl:justify-between xl:w-[60%]">
           <li>
             <a href="/">Home</a>
           </li>
@@ -32,7 +33,12 @@ export function Navbar() {
             <a href="#">About</a>
           </li>
           <li>
-            <a href="/features">Features</a>
+            <div className="feature">
+              <a href="/features">Features</a>
+              <div className="feature-menu">
+                <FeatureMenu />
+              </div>
+            </div>
           </li>
           <li>
             <a href="#">Pricing</a>
@@ -64,7 +70,7 @@ const NavElements = styled.div`
     }
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 768px) {
     position: fixed;
     right: 0;
     top: 65px;
@@ -78,6 +84,29 @@ const NavElements = styled.div`
     &.active {
       visibility: visible;
       width: 100%;
+    }
+  }
+
+  .feature {
+    .feature-menu {
+      display: block;
+      position: absolute;
+      top: 80px;
+      right: 40px;
+      visibility: hidden;
+    }
+    &:hover {
+      .feature-menu {
+        visibility: visible;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature {
+      .feature-menu {
+        display: none;
+      }
     }
   }
 `;

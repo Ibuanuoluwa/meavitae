@@ -14,6 +14,8 @@ interface FeatureProps {
   title: string;
   number: string;
   description: string;
+  reviewText: string;
+  reviewerImg: string;
   background?: boolean;
   pointsBackgroundColor?: boolean;
   reverseFlex?: boolean;
@@ -25,6 +27,8 @@ export function Feature({
   title,
   number,
   description,
+  reviewText,
+  reviewerImg,
   background,
   pointsBackgroundColor,
   reverseFlex,
@@ -47,7 +51,7 @@ export function Feature({
             <h1 className="header-one hidden md:block">{title}</h1>
             <p className="mt-4 lg:text-xl text-lg ">{description}</p>
             <div className="mt-8">
-              <Review />
+              <Review reviewText={reviewText} reviewerImg={reviewerImg} />
             </div>
           </div>
         </div>

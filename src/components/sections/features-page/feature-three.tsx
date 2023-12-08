@@ -1,37 +1,40 @@
 import legalSvg from "../../../assets/svg/features/legal-svg.svg";
-import effortIcon from "../../../assets/icons/feature-icons/effort-icon.svg";
-import accessIcon from "../../../assets/icons/feature-icons/access-icon.svg";
-import paperlessIcon from "../../../assets/icons/feature-icons/paperless-icon.svg";
+import shareIcon from "../../../assets/icons/feature-icons/share-icon.svg";
+import supportIcon from "../../../assets/icons/feature-icons/support-icon.svg";
+import legalIcon from "../../../assets/icons/feature-icons/legal-icon.svg";
+import reviewerImg from "../../../assets/images/reviewer-profile-images/profile-img-3.png";
 import { Feature } from "./feature/feature";
 
 const feautrePointsData = [
   {
-    title: "Effortless Organisation",
-    imgSrc: effortIcon,
+    title: "Secure Sharing",
+    imgSrc: shareIcon,
     description:
-      "Simplifies the organisation of essential documents by providing a platform to categorise and store all your important information in one place",
+      "Share sensitive documents with total confidence, ensuring that your information remains confidential and protected from interception",
   },
   {
-    title: "Anywhere Access",
-    imgSrc: accessIcon,
+    title: "Comprehensive Support",
+    imgSrc: supportIcon,
     description:
-      "The convenience of accessing your critical data from anywhere with an internet connection. Whether at home, in the office, or on the go, you can securely retrieve and manage your information, providing flexibility",
+      "Receive legal and financial support in one centralised location",
   },
   {
-    title: "Paperless Efficiency",
-    imgSrc: paperlessIcon,
+    title: "Tranquillity",
+    imgSrc: legalIcon,
     description:
-      "Moving from physical mess to using a digital solution, you contribute to environmental sustainability and enjoy the efficiency of having all your important documents in a digital format, reducing physical space",
+      "Interact with legal and financial professionals, ensuring the highest protection for sensitive information",
   },
 ];
 
 export function FeatureThree() {
   return (
-    <div>
+    <div className="md:my-8">
       <Feature
         title="Legal and Financial Advisors"
         number="03"
-        description="Where you can store everything important. Replace mountains of paper and rows of filing cabinets by storing your paperwork in one place, saving you countless hours trying to find the necessary things. Utilising cutting-edge hardware technology, your data remains exclusively accessible to you."
+        description="If you want to enhance your value, MeaVitae, with your consent, can connect you to trusted 3rd party advisors. We believe that if you plan today, tomorrow will look after itself.  It can lead to anxious times when you need legal support, so why not seek advice from our Legal Services partner, who can provide peace of mind at reasonable rates?"
+        reviewText="“Meavitae eased my estate planning worries, offering legal advisor access for creating a will. The support turned a daunting task into simplicity”"
+        reviewerImg={reviewerImg}
         featureSvg={legalSvg}
         featurePointsData={feautrePointsData}
         pointsBackgroundColor

@@ -8,7 +8,7 @@ export function FeatureHeroSection() {
         A unique solution for <span className="text-purple">everybody</span> at
         every stage of their lives
       </h1>
-      <div className="flex gap-4 align-items-center md:mt-10 mt-4">
+      <div className="flex gap-4 items-center md:mt-10 mt-4">
         <button className="lg:max-w-none max-w-[150px]">
           <img src={googleBtn} alt="google play" className="w-full" />
         </button>

@@ -6,3 +6,4 @@ export { FeatureFour } from "./feature-four";
 export { FeatureFive } from "./feature-five";
 export { FeatureSix } from "./feature-six";
 export { FeatureSeven } from "./feature-seven";
+export { FeatureBanner } from "./feature-banner";

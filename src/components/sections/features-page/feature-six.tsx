@@ -1,37 +1,40 @@
 import aiSvg from "../../../assets/svg/features/ai-svg.svg";
-import effortIcon from "../../../assets/icons/feature-icons/effort-icon.svg";
-import accessIcon from "../../../assets/icons/feature-icons/access-icon.svg";
-import paperlessIcon from "../../../assets/icons/feature-icons/paperless-icon.svg";
+import efficiencyIcon from "../../../assets/icons/feature-icons/efficiency-icon.svg";
+import consistencyIcon from "../../../assets/icons/feature-icons/consistency-icon.svg";
+import errorIcon from "../../../assets/icons/feature-icons/error-icon.svg";
+import reviewerImg from "../../../assets/images/reviewer-profile-images/profile-img-6.png";
 import { Feature } from "./feature/feature";
 
 const feautrePointsData = [
   {
-    title: "Effortless Organisation",
-    imgSrc: effortIcon,
+    title: "Efficiency",
+    imgSrc: efficiencyIcon,
     description:
-      "Simplifies the organisation of essential documents by providing a platform to categorise and store all your important information in one place",
+      "Generate personalised letters quickly and efficiently, allowing you to focus on other important tasks",
   },
   {
-    title: "Anywhere Access",
-    imgSrc: accessIcon,
+    title: "Consistency",
+    imgSrc: consistencyIcon,
     description:
-      "The convenience of accessing your critical data from anywhere with an internet connection. Whether at home, in the office, or on the go, you can securely retrieve and manage your information, providing flexibility",
+      "Ensure consistency in your written communication. The AI letter writer creates documents that stay true to your style and tone, providing a cohesive and professional image across various situations",
   },
   {
-    title: "Paperless Efficiency",
-    imgSrc: paperlessIcon,
+    title: "Error reduction",
+    imgSrc: errorIcon,
     description:
-      "Moving from physical mess to using a digital solution, you contribute to environmental sustainability and enjoy the efficiency of having all your important documents in a digital format, reducing physical space",
+      "Reduce the likelihood of errors in written communication. This tool helps ensure that documents are free from spelling mistakes, grammatical errors, and inconsistencies",
   },
 ];
 
 export function FeatureSix() {
   return (
-    <div>
+    <div className="md:my-8">
       <Feature
         title="AI Letter Writer"
         number="06"
-        description="Where you can store everything important. Replace mountains of paper and rows of filing cabinets by storing your paperwork in one place, saving you countless hours trying to find the necessary things. Utilising cutting-edge hardware technology, your data remains exclusively accessible to you."
+        description="Create personalised, mistake-free documents, saving time. These letters stay consistent and fit different situations. You can customise them, use different languages, and make sure they follow your specific rules. This helps you get more done!"
+        reviewText="“As a busy legal professional, Meavitae's AI letter writer feature is a lifesaver! Crafting personalised, error-free documents within the platform is easy, and it has helped me be more productive”"
+        reviewerImg={reviewerImg}
         featureSvg={aiSvg}
         featurePointsData={feautrePointsData}
         background

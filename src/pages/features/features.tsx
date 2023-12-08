@@ -7,6 +7,7 @@ import {
   FeatureFive,
   FeatureSix,
   FeatureSeven,
+  FeatureBanner,
 } from "../../components/sections/features-page";
 
 export function Features() {
@@ -20,6 +21,7 @@ export function Features() {
       <FeatureFive />
       <FeatureSix />
       <FeatureSeven />
+      <FeatureBanner />
     </div>
   );
 }

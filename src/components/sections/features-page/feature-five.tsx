@@ -1,37 +1,40 @@
 import msgSvg from "../../../assets/svg/features/msg-svg.svg";
-import effortIcon from "../../../assets/icons/feature-icons/effort-icon.svg";
-import accessIcon from "../../../assets/icons/feature-icons/access-icon.svg";
-import paperlessIcon from "../../../assets/icons/feature-icons/paperless-icon.svg";
+import accessibilityIcon from "../../../assets/icons/feature-icons/accessibility-icon.svg";
+import colabIcon from "../../../assets/icons/feature-icons/colab-icon.svg";
+import confiIcon from "../../../assets/icons/feature-icons/confi-icon.svg";
+import reviewerImg from "../../../assets/images/reviewer-profile-images/profile-img-5.png";
 import { Feature } from "./feature/feature";
 
 const feautrePointsData = [
   {
-    title: "Effortless Organisation",
-    imgSrc: effortIcon,
+    title: "Secure Collaboration",
+    imgSrc: colabIcon,
     description:
-      "Simplifies the organisation of essential documents by providing a platform to categorise and store all your important information in one place",
+      "End-to-end encryption ensures that your communications remain confidential, providing peace of mind. Communicate confidently with colleagues, clients, or collaborators",
   },
   {
-    title: "Anywhere Access",
-    imgSrc: accessIcon,
+    title: "Complete Confidentiality",
+    imgSrc: confiIcon,
     description:
-      "The convenience of accessing your critical data from anywhere with an internet connection. Whether at home, in the office, or on the go, you can securely retrieve and manage your information, providing flexibility",
+      "Your messages and data are for your eyes only. The system assures the highest level of confidentiality in your communications",
   },
   {
-    title: "Paperless Efficiency",
-    imgSrc: paperlessIcon,
+    title: "Accessibility",
+    imgSrc: accessibilityIcon,
     description:
-      "Moving from physical mess to using a digital solution, you contribute to environmental sustainability and enjoy the efficiency of having all your important documents in a digital format, reducing physical space",
+      "Access legal and financial professionals or other Meavitae users easily within this secure messaging system from anywhere",
   },
 ];
 
 export function FeatureFive() {
   return (
-    <div>
+    <div className="md:my-8">
       <Feature
         title="Secure Messaging"
         number="05"
-        description="Where you can store everything important. Replace mountains of paper and rows of filing cabinets by storing your paperwork in one place, saving you countless hours trying to find the necessary things. Utilising cutting-edge hardware technology, your data remains exclusively accessible to you."
+        description="Take private communication to the next level. Communicate with Meavitae friends and share information with 3rd parties using our secure messaging system, ensuring no service provider can ever read your mails"
+        reviewText="“As a digital marketing specialist obsessed with privacy, Meavitae's secure messaging is a game-changer. Trusting this platform was a no-brainer”"
+        reviewerImg={reviewerImg}
         featureSvg={msgSvg}
         featurePointsData={feautrePointsData}
         pointsBackgroundColor
