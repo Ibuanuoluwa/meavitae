@@ -10,7 +10,7 @@ import {
   FeatureBanner,
 } from "../../components/sections/features-page";
 
-export function Features() {
+export function FeaturesPage() {
   return (
     <div>
       <FeatureHeroSection />
