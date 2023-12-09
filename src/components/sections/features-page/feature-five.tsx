@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureFive() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="secure-msg">
       <Feature
         title="Secure Messaging"
         number="05"

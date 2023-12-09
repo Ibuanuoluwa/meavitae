@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureFour() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="will-creation">
       <Feature
         title="Will and Document Creation"
         number="04"

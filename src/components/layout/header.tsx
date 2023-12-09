@@ -94,9 +94,7 @@ const NavElements = styled.div`
   .feature {
     .feature-menu {
       display: block;
-      position: absolute;
-      top: 70px;
-      right: 40px;
+      right: 0;
       visibility: hidden;
       transition: all 0.3s ease-in-out;
     }

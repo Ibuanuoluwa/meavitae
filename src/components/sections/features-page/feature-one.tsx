@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureOne() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="secure-digital">
       <Feature
         title="Secure Digital Vault"
         number="01"

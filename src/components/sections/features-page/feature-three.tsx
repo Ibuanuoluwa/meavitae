@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureThree() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="legal-advisors">
       <Feature
         title="Legal and Financial Advisors"
         number="03"

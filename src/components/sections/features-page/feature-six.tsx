@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureSix() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="ai-writer">
       <Feature
         title="AI Letter Writer"
         number="06"

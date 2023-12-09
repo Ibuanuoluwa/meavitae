@@ -28,7 +28,7 @@ const feautrePointsData = [
 
 export function FeatureTwo() {
   return (
-    <div className="md:my-8">
+    <div className="md:my-8" id="net-worth">
       <Feature
         title="Net Worth Calculator"
         number="02"

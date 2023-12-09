@@ -6,7 +6,7 @@ function FeatureMenu() {
   return (
     <FeatureMenuWrapper>
       {featureMenuItems.map((item, index) => (
-        <div className="flex gap-4" key={index}>
+        <a href={`/features#${item.id}`} className="flex gap-4" key={index}>
           <div>
             <img src={item.img} alt={item.title} />
           </div>
@@ -14,18 +14,21 @@ function FeatureMenu() {
             <h1 className="text-lg font-bold">{item.title}</h1>
             <p className="text-sm">{item.description}</p>
           </div>
-        </div>
+        </a>
       ))}
     </FeatureMenuWrapper>
   );
 }
 
 const FeatureMenuWrapper = styled.div`
+  top: 70px;
   display: flex;
+  position: absolute;
   gap: 40px;
   padding: 30px;
-  width: 1181px !important;
-  width: 80%;
+  width: 80% !important;
+  right: 40px;
+  justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 16px;
   border: 2px solid var(--White, #fff);
