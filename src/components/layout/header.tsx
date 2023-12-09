@@ -45,10 +45,13 @@ export function Navbar() {
             </div>
           </li>
           <li>
-            <a href="#">Pricing</a>
+            <a href="/pricing">Pricing</a>
           </li>
           <li>
-            <a href="#">Articles</a>
+            <a href="/partners">Partners</a>
+          </li>
+          <li>
+            <a href="/articles">Articles</a>
           </li>
         </ul>
         <div className="flex items-center gap-4">

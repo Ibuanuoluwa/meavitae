@@ -12,10 +12,9 @@ function Post({ img, title, description }: postProps) {
       <div>
         <img src={img} alt={title} className="w-full" />
       </div>
-      <h1 className="md:text-2xl text-lg font-bold">{title}</h1>
+      <h1 className="md:text-2xl text-lg font-bold my-2">{title}</h1>
       <p className="md:text-lg">
-        <span> {description}</span>
-
+        {description}
         <a href="/" className="text-purple decoration-none ml-2">
           Read More
         </a>
@@ -27,7 +26,7 @@ function Post({ img, title, description }: postProps) {
 const PostStyle = styled.div`
   p {
     span {
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 3 !important;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;

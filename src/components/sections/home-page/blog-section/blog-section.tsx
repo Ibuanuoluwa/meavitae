@@ -1,5 +1,5 @@
 import postsData from "../../../../data/posts";
-import Post from "./post";
+import Post from "../../../common/post";
 
 export function BlogSection() {
   return (
