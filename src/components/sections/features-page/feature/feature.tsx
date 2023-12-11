@@ -1,6 +1,7 @@
 import React from "react";
 import Review from "./review";
-import FeaturePoint from "./features-points";
+
+import FeatureItem from "./features-items";
 
 interface FeaturePointData {
   title: string;
@@ -9,7 +10,7 @@ interface FeaturePointData {
 }
 
 interface FeatureProps {
-  featurePointsData: FeaturePointData[];
+  featureItemsData: FeaturePointData[];
   featureSvg: string;
   title: string;
   number: string;
@@ -17,12 +18,12 @@ interface FeatureProps {
   reviewText: string;
   reviewerImg: string;
   background?: boolean;
-  pointsBackgroundColor?: boolean;
+  itemsBackgroundColor?: boolean;
   reverseFlex?: boolean;
 }
 
 export function Feature({
-  featurePointsData,
+  featureItemsData,
   featureSvg,
   title,
   number,
@@ -30,7 +31,7 @@ export function Feature({
   reviewText,
   reviewerImg,
   background,
-  pointsBackgroundColor,
+  itemsBackgroundColor,
   reverseFlex,
 }: FeatureProps) {
   return (
@@ -60,13 +61,13 @@ export function Feature({
         </div>
       </div>
       <div className="mt-16 flex md:flex-row flex-col gap-4 md:justify-between">
-        {featurePointsData.map((point, index) => (
-          <FeaturePoint
-            title={point.title}
-            imgSrc={point.imgSrc}
-            description={point.description}
+        {featureItemsData.map((item, index) => (
+          <FeatureItem
+            title={item.title}
+            imgSrc={item.imgSrc}
+            description={item.description}
             key={index}
-            backgroundColor={pointsBackgroundColor}
+            backgroundColor={itemsBackgroundColor}
           />
         ))}
       </div>

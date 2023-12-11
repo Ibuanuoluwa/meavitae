@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import featureData from "../../../../data/feature";
+import featuresData from "../../../../data/features";
 import Feature from "./feature";
 import styled from "styled-components";
 import CustomButton from "../../../common/custom-button";
@@ -64,47 +64,47 @@ export function FeatureSection() {
           {activeTab === 0 && (
             <div>
               <Feature
-                title={featureData[0].title}
-                description={featureData[0].description}
-                points={featureData[0].points}
-                img={featureData[0].img}
+                title={featuresData[0].title}
+                description={featuresData[0].description}
+                points={featuresData[0].points}
+                img={featuresData[0].img}
               />
             </div>
           )}
           {activeTab === 1 && (
             <div>
               <Feature
-                title={featureData[1].title}
-                description={featureData[1].description}
-                points={featureData[1].points}
-                img={featureData[1].img}
+                title={featuresData[1].title}
+                description={featuresData[1].description}
+                points={featuresData[1].points}
+                img={featuresData[1].img}
               />
             </div>
           )}
           {activeTab === 2 && (
             <div>
               <Feature
-                title={featureData[2].title}
-                description={featureData[2].description}
-                points={featureData[2].points}
-                img={featureData[2].img}
+                title={featuresData[2].title}
+                description={featuresData[2].description}
+                points={featuresData[2].points}
+                img={featuresData[2].img}
               />
             </div>
           )}
           {activeTab === 3 && (
             <div>
               <Feature
-                title={featureData[3].title}
-                description={featureData[3].description}
-                points={featureData[3].points}
-                img={featureData[3].img}
+                title={featuresData[3].title}
+                description={featuresData[3].description}
+                points={featuresData[3].points}
+                img={featuresData[3].img}
               />
             </div>
           )}
         </div>
       </div>
       <div className="flex flex-col gap-6 md:hidden">
-        {featureData.map((feature, index) => (
+        {featuresData.map((feature, index) => (
           <Feature
             title={feature.title}
             description={feature.description}

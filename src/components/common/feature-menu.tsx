@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import featureMenuItems from "../../data/featureMenuItems";
+import featuresMenuItems from "../../data/featuresMenuItems";
 
 function FeatureMenu() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleMenuClick = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) {
+    return null;
+  }
   return (
     <FeatureMenuWrapper>
-      {featureMenuItems.map((item, index) => (
-        <a href={`/features#${item.id}`} className="flex gap-4" key={index}>
+      {featuresMenuItems.map((item, index) => (
+        <a
+          href={`/features#${item.id}`}
+          className="flex gap-4"
+          key={index}
+          onClick={handleMenuClick}
+        >
           <div>
             <img src={item.img} alt={item.title} />
           </div>

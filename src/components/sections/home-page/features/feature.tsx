@@ -1,5 +1,5 @@
 import mark from "../../../../assets/icons/mark.svg";
-import CustomButton from "../../../common/custom-button";
+
 
 type featureProp = {
   title: string;

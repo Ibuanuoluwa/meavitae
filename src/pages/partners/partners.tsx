@@ -7,11 +7,11 @@ import {
 
 export function PartnersPage() {
   return (
-    <div>
+    <>
       <PartnersHeroSection />
       <SolutionSection />
       <RewardSection />
       <RegisterForm />
-    </div>
+    </>
   );
 }

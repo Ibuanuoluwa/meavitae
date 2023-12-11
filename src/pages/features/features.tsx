@@ -12,7 +12,7 @@ import {
 
 export function FeaturesPage() {
   return (
-    <div>
+    <>
       <FeatureHeroSection />
       <FeatureOne />
       <FeatureTwo />
@@ -22,6 +22,6 @@ export function FeaturesPage() {
       <FeatureSix />
       <FeatureSeven />
       <FeatureBanner />
-    </div>
+    </>
   );
 }

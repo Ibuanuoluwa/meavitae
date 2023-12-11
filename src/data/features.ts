@@ -3,7 +3,7 @@ import comImg from "../assets/images/feature-img/com-img.png";
 import finImg from "../assets/images/feature-img/fin-img.png";
 import legacyImg from "../assets/images/feature-img/legacy-img.png";
 
-const featureData = [
+const featuresData = [
   {
     title: "Secure Storage",
     description:
@@ -46,4 +46,4 @@ const featureData = [
   },
 ];
 
-export default featureData;
+export default featuresData;

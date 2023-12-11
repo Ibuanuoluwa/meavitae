@@ -1,34 +1,14 @@
 import netWorthSvg from "../../../assets/svg/features/net-worth-svg.svg";
-import clarityIcon from "../../../assets/icons/feature-icons/clarity-icon.svg";
-import trackerIcon from "../../../assets/icons/feature-icons/tracker-icon.svg";
-import mobileIcon from "../../../assets/icons/feature-icons/mobile-icon.svg";
 import reviewerImg from "../../../assets/images/reviewer-profile-images/profile-img-2.png";
 import { Feature } from "./feature/feature";
+import featuresItemData from "../../../data/featuresItemData";
+import { FeatureWrapper } from "./feature-wrapper";
 
-const feautrePointsData = [
-  {
-    title: "Clarity",
-    imgSrc: clarityIcon,
-    description:
-      "Consolidate assets and liabilities for a clear snapshot of your financial health",
-  },
-  {
-    title: "Real-time Tracking",
-    imgSrc: trackerIcon,
-    description:
-      "Track your net worth in real-time, allowing for instant insights and informed decision-making as your financial situation evolves",
-  },
-  {
-    title: "Convenient Accessibility",
-    imgSrc: mobileIcon,
-    description:
-      "Easily access your net worth data at the touch of a button, offering the flexibility to check and manage your financial status anytime, anywhere",
-  },
-];
+
 
 export function FeatureTwo() {
   return (
-    <div className="md:my-8" id="net-worth">
+    <FeatureWrapper id="net-worth">
       <Feature
         title="Net Worth Calculator"
         number="02"
@@ -36,10 +16,10 @@ export function FeatureTwo() {
         reviewText="“Meavitae's Net Worth Calculator revolutionised my financial management—recording assets and liabilities for easy tracking and insights anytime, anywhere”"
         reviewerImg={reviewerImg}
         featureSvg={netWorthSvg}
-        featurePointsData={feautrePointsData}
+        featureItemsData={featuresItemData.featureTwo}
         background
         reverseFlex
       />
-    </div>
+    </FeatureWrapper>
   );
 }

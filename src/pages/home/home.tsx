@@ -10,7 +10,7 @@ import {
 
 export function HomePage() {
   return (
-    <div>
+    <>
       <HeroSection />
       <WhySection />
       <ReviewSection />
@@ -18,7 +18,7 @@ export function HomePage() {
       <FeatureSection />
       <BlogSection />
       <FAQSection />
-    </div>
+    </>
   );
 }
 

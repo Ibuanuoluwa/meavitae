@@ -1,18 +1,18 @@
 import React from "react";
 
-type featurePointProps = {
+type featureItemProps = {
   title: string;
   imgSrc: string;
   description: string;
   backgroundColor?: boolean;
 };
 
-function FeaturePoint({
+function FeatureItem({
   title,
   imgSrc,
   description,
   backgroundColor,
-}: featurePointProps) {
+}: featureItemProps) {
   return (
     <div
       className={`${
@@ -30,4 +30,4 @@ function FeaturePoint({
   );
 }
 
-export default FeaturePoint;
+export default FeatureItem;

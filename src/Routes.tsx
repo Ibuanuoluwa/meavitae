@@ -5,6 +5,7 @@ import {
   AboutPage,
   PartnersPage,
   ArticlesPage,
+  PricingPage
 } from "./pages";
 
 function AppRoutes() {
@@ -16,6 +17,7 @@ function AppRoutes() {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/partners" component={PartnersPage} />
         <Route exact path="/articles" component={ArticlesPage} />
+        <Route exact path="/pricing" component={PricingPage} />
       </Switch>
     </Router>
   );

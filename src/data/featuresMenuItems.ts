@@ -6,7 +6,7 @@ import legalIcon from "../assets/icons/feature-menu-icons/legal-icon.svg";
 import docIcon from "../assets/icons/feature-menu-icons/doc-icon.svg";
 import letterIcon from "../assets/icons/feature-menu-icons/letter-icon.svg";
 
-const featureMenuItems = [
+const featuresMenuItems = [
   {
     img: bankIcon,
     title: "Secure Digital Vault",
@@ -51,4 +51,4 @@ const featureMenuItems = [
   },
 ];
 
-export default featureMenuItems;
+export default featuresMenuItems;
