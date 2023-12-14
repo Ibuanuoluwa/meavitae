@@ -1,6 +1,11 @@
 import googleBtn from "../../../assets/icons/google-play-btn.svg";
 import appleBtn from "../../../assets/icons/app-store-btn.svg";
-import heroImg from "../../../assets/images/hero-img.png";
+import centerImg from "../../../assets/images/blog-img/img-1.png";
+import leftImg1 from "../../../assets/images/blog-img/img-1.png";
+import leftImg2 from "../../../assets/images/blog-img/img-1.png";
+import rightImg1 from "../../../assets/images/blog-img/img-1.png";
+import rightImg2 from "../../../assets/images/blog-img/img-1.png";
+import HeroSvg from "./hero-svg";
 
 export function HeroSection() {
   return (
@@ -24,7 +29,14 @@ export function HeroSection() {
         </div>
       </div>
       <div className="md:w-[45%] mt-8 md:mt-0">
-        <img src={heroImg} alt="hero" />
+        {/* <img src={heroImg} alt="hero" /> */}
+        <HeroSvg
+          centerImg={centerImg}
+          leftImg1={leftImg1}
+          leftImg2={leftImg2}
+          rightImg1={rightImg1}
+          rightImg2={rightImg2}
+        />
       </div>
     </div>
   );

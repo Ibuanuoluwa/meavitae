@@ -55,7 +55,7 @@ function Plan({ background, name, price, description, planItems }: planProps) {
           className="flex flex-col gap-4 bg-lightGray p-4"
           key={index}
         >
-          <h1>{planItems.title}</h1>
+          <h1 className="text-lg md:text-xl font-semibold">{planItems.title}</h1>
           {planItems.items.map((item, index) => (
             <div className="flex items-center gap-4" key={index}>
               <div className="w-[20px] md:w-fit">

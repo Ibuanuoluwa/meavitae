@@ -11,9 +11,28 @@ import msgSvg from "../assets/svg/features/msg-svg.svg";
 import reviewerImgFive from "../assets/images/reviewer-profile-images/profile-img-5.png";
 import aiSvg from "../assets/svg/features/ai-svg.svg";
 import reviewerImgSix from "../assets/images/reviewer-profile-images/profile-img-6.png";
+import knowledgeSvg from "../assets/svg/features/knowledge-svg.svg";
 import reviewerImgSeven from "../assets/images/reviewer-profile-images/profile-img-7.png";
 
-export const featureConfigs = {
+interface FeatureConfig {
+  id?: string; // Optional because not all features have 'id'
+  title: string;
+  number: string;
+  description: string;
+  reviewText: string;
+  reviewerImg: string;
+  featureSvg: string;
+  featureItemsData: any; // Replace 'any' with the correct type if possible
+  itemsBackgroundColor?: boolean;
+  background?: boolean;
+  reverseFlex?: boolean;
+}
+
+export interface FeatureConfigs {
+  [key: string]: FeatureConfig;
+}
+
+export const featureConfigs: FeatureConfigs = {
   featureOne: {
     id: "secure-digital",
     title: "Secure Digital Vault",
@@ -28,6 +47,7 @@ export const featureConfigs = {
     itemsBackgroundColor: true,
   },
   featureTwo: {
+    id: "net-worth",
     title: "Net Worth Calculator",
     number: "02",
     description:
@@ -41,6 +61,7 @@ export const featureConfigs = {
     reverseFlex: true,
   },
   featureThree: {
+    id: "legal-advisors",
     title: "Legal and Financial Advisors",
     number: "03",
     description:
@@ -53,6 +74,7 @@ export const featureConfigs = {
     itemsBackgroundColor: true,
   },
   featureFour: {
+    id: "will-creation",
     title: "Will and Document Creation",
     number: "04",
     description:
@@ -66,6 +88,7 @@ export const featureConfigs = {
     reverseFlex: true,
   },
   featureFive: {
+    id: "secure-msg",
     title: "Secure Messaging",
     number: "05",
     description:
@@ -78,6 +101,7 @@ export const featureConfigs = {
     itemsBackgroundColor: true,
   },
   featureSix: {
+    id: "ai-writer",
     title: "AI Letter Writer",
     number: "06",
     description:
@@ -91,6 +115,7 @@ export const featureConfigs = {
     reverseFlex: true,
   },
   featureSeven: {
+    id: "knowlegde-base",
     title: "Knowledge Base",
     number: "07",
     description:
@@ -98,8 +123,8 @@ export const featureConfigs = {
     reviewText:
       "“When crafting my NDA, the wealth of information and insights available in the knowledge base was very helpful. It streamlined the process and gave me a deeper understanding of the documents I was completing”",
     reviewerImg: reviewerImgSeven,
-    featureSvg: secureSvg,
-    featureItemsData: featuresItemData.futureSix,
+    featureSvg: knowledgeSvg,
+    featureItemsData: featuresItemData.futureSeven,
     itemsBackgroundColor: true,
   },
 };
