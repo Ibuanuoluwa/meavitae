@@ -1,10 +1,10 @@
 import googleBtn from "../../../assets/icons/google-play-btn.svg";
 import appleBtn from "../../../assets/icons/app-store-btn.svg";
-import centerImg from "../../../assets/images/blog-img/img-1.png";
-import leftImg1 from "../../../assets/images/blog-img/img-1.png";
-import leftImg2 from "../../../assets/images/blog-img/img-1.png";
-import rightImg1 from "../../../assets/images/blog-img/img-1.png";
-import rightImg2 from "../../../assets/images/blog-img/img-1.png";
+import centerImg from "../../../assets/images/hero-images/business-suit.png";
+import leftImg1 from "../../../assets/images/hero-images/american-soldier.png";
+import leftImg2 from "../../../assets/images/hero-images/equipment-job.png";
+import rightImg1 from "../../../assets/images/hero-images/classroom-workbench.png";
+import rightImg2 from "../../../assets/images/hero-images/helicopter-pilot.png";
 import HeroSvg from "./hero-svg";
 
 export function HeroSection() {
