@@ -90,7 +90,7 @@ function HeroSvg({
             href={leftImg1}
             x="0"
             y="0"
-            width="100"
+            width="120"
             height="120"
             preserveAspectRatio="xMidYMid slice"
           />
@@ -136,7 +136,7 @@ function HeroSvg({
             x="0"
             y="0"
             width="100"
-            height="100"
+            height="120"
             preserveAspectRatio="xMidYMid slice"
           />
         </pattern>
