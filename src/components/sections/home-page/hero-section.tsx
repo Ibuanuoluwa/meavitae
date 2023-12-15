@@ -1,7 +1,7 @@
 import googleBtn from "../../../assets/icons/google-play-btn.svg";
 import appleBtn from "../../../assets/icons/app-store-btn.svg";
-import centerImg from "../../../assets/images/hero-images/business-suit.png";
-import leftImg1 from "../../../assets/images/hero-images/american-soldier.png";
+import centerImg from "../../../assets/images/hero-images/classroom-workbench.png";
+import leftImg1 from "../../../assets/images/hero-images/shipping-business.png";
 import leftImg2 from "../../../assets/images/hero-images/equipment-job.png";
 import rightImg1 from "../../../assets/images/hero-images/classroom-workbench.png";
 import rightImg2 from "../../../assets/images/hero-images/helicopter-pilot.png";
@@ -29,12 +29,11 @@ export function HeroSection() {
         </div>
       </div>
       <div className="md:w-[45%] mt-8 md:mt-0">
-        {/* <img src={heroImg} alt="hero" /> */}
         <HeroSvg
           centerImg={centerImg}
           leftImg1={leftImg1}
           leftImg2={leftImg2}
-          rightImg1={rightImg1}
+          rightImg1={rightImg2}
           rightImg2={rightImg2}
         />
       </div>

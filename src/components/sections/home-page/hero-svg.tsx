@@ -67,43 +67,78 @@ function HeroSvg({
       <defs>
         <pattern
           id="imgPattern1"
-          patternUnits="userSpaceOnUse"
-          width="600"
-          height="600"
+          patternUnits="objectBoundingBox"
+          width="100%"
+          height="100%"
         >
-          <image href={centerImg} x="0" y="0" width="600" height="600" />
+          <image
+            href={centerImg}
+            x="0"
+            y="0"
+            width="380"
+            height="450"
+            preserveAspectRatio="xMidYMid slice"
+          />
         </pattern>
         <pattern
           id="imgPattern2"
-          patternUnits="userSpaceOnUse"
-          width="150"
-          height="300"
+          patternUnits="objectBoundingBox"
+          width="100%"
+          height="100%"
         >
-          <image href={leftImg1} x="0" y="0" width="150" height="300" />
+          <image
+            href={leftImg1}
+            x="0"
+            y="0"
+            width="100"
+            height="120"
+            preserveAspectRatio="xMidYMid slice"
+          />
         </pattern>
         <pattern
           id="imgPattern3"
-          patternUnits="userSpaceOnUse"
-          width="300"
-          height="300"
+          patternUnits="objectBoundingBox"
+          width="100%"
+          height="100%"
         >
-          <image href={leftImg2} x="0" y="0" width="300" height="300" />
+          <image
+            href={leftImg2}
+            x="0"
+            y="0"
+            width="110"
+            height="120"
+            preserveAspectRatio="xMidYMid slice"
+          />
         </pattern>
         <pattern
           id="imgPattern4"
-          patternUnits="userSpaceOnUse"
-          width="150"
-          height="300"
+          patternUnits="objectBoundingBox"
+          width="100%"
+          height="100%"
         >
-          <image href={rightImg1} x="0" y="0" width="300" height="300" />
+          <image
+            href={rightImg1}
+            x="0"
+            y="0"
+            width="120"
+            height="120"
+            preserveAspectRatio="xMidYMid slice"
+          />
         </pattern>
         <pattern
           id="imgPattern5"
-          patternUnits="userSpaceOnUse"
-          width="300"
-          height="300"
+          patternUnits="objectBoundingBox"
+          width="100%"
+          height="100%"
         >
-          <image href={rightImg2} x="0" y="0" width="300" height="300" />
+          <image
+            href={rightImg2}
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            preserveAspectRatio="xMidYMid slice"
+          />
         </pattern>
       </defs>
       <path
