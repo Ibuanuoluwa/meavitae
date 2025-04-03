@@ -21,7 +21,7 @@ const ChatArea: React.FC<ChatAreaProps> = ({
   onSendMessage,
 }) => {
   return (
-    <div className="flex flex-col flex-1 md:ml-1">
+    <div className="flex flex-col flex-1 md:ml-1 min-h-full my-auto">
       <ChatHeader contact={contact} onBack={onBack} />
 
       <div className="flex-1 p-4 overflow-y-auto bg-white mt-1">

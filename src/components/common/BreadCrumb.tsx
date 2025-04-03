@@ -28,7 +28,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                   {item.label}
                 </Link>
               )}
-              {index + 1 !== items.length && (
+              {(index + 1 !== items.length || index === 0) && (
                 <img
                   src={chevronRightIcon}
                   alt="right-arrow"

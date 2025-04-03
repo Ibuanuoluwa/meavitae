@@ -33,12 +33,12 @@ function AccountFolder() {
       <div>
         <Breadcrumb items={breadcrumbItems} />
       </div>
-      <div className="flex md:flex-row flex-col gap-4 md:items-center justify-between">
+      <div className="flex md:flex-row flex-col gap-4 md:items-center justify-between my-2">
         <div className="flex md:gap-4 gap-1 items-center ">
           <div className="border-lightGray border-4 rounded-3xl px-3 py-2 border items-center flex gap-2 text-[#1C1C1C] xl:w-[350px]  lg:w-[300px]">
             <img
               src={searchIcon}
-              alt="search"
+              alt="Search"
               className="md:h-6 md:w-6 w-4 h-4"
             />
             <input
@@ -53,7 +53,7 @@ function AccountFolder() {
         </div>
         <div className="flex gap-6 lg:text-base text-sm">
           <button className="flex gap-2 items-center bg-[#F9F8FA] text-purple py-2 px-4 rounded-lg">
-            <span>Create New Folder</span>
+            <span>New Folder</span>
             <img
               src={addFolderIcon}
               alt="add folder"

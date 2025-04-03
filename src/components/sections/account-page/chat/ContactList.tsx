@@ -38,16 +38,16 @@ const ContactList: React.FC<ContactListProps> = ({
           )}
         </div>
 
-        <div className="flex-1">
-          <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center flex-1">
+          <div className="">
             <h3 className="font-semibold text-base">{contact.name}</h3>
-            {contact.unread > 0 && (
-              <span className="bg-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {contact.unread}
-              </span>
-            )}
+            <p className="text-sm text-[#888888]">{`Last Updated ${contact.time}`}</p>
           </div>
-          <p className="text-sm text-[#888888]">{`Last Updated ${contact.time}`}</p>
+          {contact.unread > 0 && (
+            <p className="bg-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              {contact.unread}
+            </p>
+          )}
         </div>
       </div>
     ))}

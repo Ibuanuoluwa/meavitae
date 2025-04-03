@@ -1,24 +1,29 @@
+import contactOneImg from "../assets/images/account-images/contact-img-1.png";
+import contactTwoImg from "../assets/images/account-images/contact-img-2.png";
+import contactThreeImg from "../assets/images/account-images/contact-img-3.png";
+import contactFourImg from "../assets/images/account-images/contact-img-4.png";
+
 const contactsData = [
   {
     id: 1,
-    name: "John Doe",
-    avatar: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "Charlotte Morgan",
+    avatar: contactOneImg,
     lastMessage: "Hey, how are you doing?",
     time: "10:30 AM",
     unread: 2,
   },
   {
     id: 2,
-    name: "Jane Smith",
-    avatar: "https://randomuser.me/api/portraits/women/1.jpg",
+    name: "Carter Family",
+    avatar: contactTwoImg,
     lastMessage: "Meeting at 3 PM",
     time: "9:45 AM",
     unread: 0,
   },
   {
     id: 3,
-    name: "Mike Johnson",
-    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+    name: "Aston Veer",
+    avatar: contactThreeImg,
     lastMessage: "Please send me the files",
     time: "Yesterday",
     unread: 5,
@@ -26,8 +31,8 @@ const contactsData = [
   },
   {
     id: 4,
-    name: "Sarah Williams",
-    avatar: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Benjamin Lopez",
+    avatar: contactFourImg,
     lastMessage: "Thanks for your help!",
     time: "Yesterday",
     unread: 0,

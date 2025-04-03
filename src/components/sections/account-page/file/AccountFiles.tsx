@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Breadcrumb from "../../../common/BreadCrumb";
 import searchIcon from "../../../../assets/icons/search-icon.svg";
 import uploadIcon from "../../../../assets/icons/account-icons/upload-icon.svg";
@@ -18,18 +18,35 @@ function AccountFiles({ folder }: { folder: FolderProps }) {
   const [searchValue, setSearchValue] = useState("");
   const [showSharedUsers, setShowSharedUsers] = useState(false);
 
-  const selectedFolderFiles = folder?.children || [];
   const sharedUsers = folder?.shared || [];
-
   const breadcrumbItems = [
     { label: "File", href: "/account" },
-    { label: folder.name, href: `/account/folder/${folder.id}` },
+    { label: folder?.name, href: `/account/folder/${folder?.id}` },
   ];
+
+  const sharedUsersRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!viewParam) {
       updateSearchParams("view", "grid");
     }
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        sharedUsersRef.current &&
+        !sharedUsersRef.current.contains(event.target as Node)
+      ) {
+        setShowSharedUsers(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   const toggleView = (view: string) => {
@@ -46,27 +63,26 @@ function AccountFiles({ folder }: { folder: FolderProps }) {
       <div>
         <Breadcrumb items={breadcrumbItems} />
       </div>
-      <div className="flex md:flex-row flex-col gap-4 md:items-center justify-between">
-        <div className="flex md:gap-4 gap-1 items-center ">
-          <div className="border-lightGray border-4 rounded-3xl px-3 py-2 border items-center flex gap-2 text-[#1C1C1C] xl:w-[350px]  lg:w-[300px]">
+      <div className="flex md:flex-row flex-col gap-4 md:items-center justify-between my-2">
+        <div className="flex md:gap-4 gap-1 items-center">
+          <div className="border-lightGray border-4 rounded-3xl px-3 py-2 border items-center flex gap-2 text-[#1C1C1C] xl:w-[350px] lg:w-[300px]">
             <img
               src={searchIcon}
               alt="search"
               className="md:h-6 md:w-6 w-4 h-4"
             />
             <input
-              placeholder="search"
+              placeholder="Search"
               className="w-full outline-none bg-transparent"
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
             />
           </div>
-
           <AccountViewTabs activeView={activeView} toggleView={toggleView} />
         </div>
         <div className="flex gap-6 lg:text-base text-sm">
           <button className="flex gap-2 items-center bg-[#F9F8FA] text-purple py-2 px-4 rounded-lg">
-            <span>Create New Folder</span>
+            <span>New Folder</span>
             <img
               src={addFolderIcon}
               alt="add folder"
@@ -77,36 +93,39 @@ function AccountFiles({ folder }: { folder: FolderProps }) {
             <span>Upload</span>
             <img
               src={uploadIcon}
-              alt="add folder"
+              alt="upload"
               className="h-4 w-4 lg:h-5 lg:w-5"
             />
           </button>
         </div>
       </div>
-      <div className="flex gap-2 my-4">
-        <img src={userIcon} alt="user" className="" />
-        <div className="flex flex-col gap-3 relative">
+      <div className="flex gap-2 my-6">
+        <img src={userIcon} alt="user" />
+        <div className="flex flex-col gap-3 relative" ref={sharedUsersRef}>
           <div className="flex gap-2 items-center">
             <span className="cursor-pointer" onClick={toggleShowSharedUsers}>
               Shared With:
             </span>
-            <div className="flex -space-x-1 items-center">
+            <div className="flex -space-x-3 items-center">
               {sharedUsers.map((user) => (
-                <div className="w-7 h-7 p-[1px] bg-white">
+                <div className="w-8 h-8 p-[1px] rounded-full" key={user.name}>
                   <ProfileImage profileImg={user.profileImg} name={user.name} />
                 </div>
               ))}
             </div>
             {showSharedUsers && (
               <div className="absolute py-4 rounded-lg shadow-lg bg-white text-[181D27] min-w-[280px] z-50 top-10">
-                <div className="mb-4  px-4">
+                <div className="mb-4 px-4">
                   <p className="text-[#888888] mb-2">Shared With</p>
-                  <p className="">
+                  <p>
                     <span>Created:</span> <span>{folder?.lastModified}</span>
                   </p>
                 </div>
                 {sharedUsers.map((user) => (
-                  <div className="flex items-center gap-3  py-3 px-4 border-t-[1px] border-t-[#E5E7EB] ">
+                  <div
+                    className="flex items-center gap-3 py-3 px-4 border-t-[1px] border-t-[#E5E7EB]"
+                    key={user.name}
+                  >
                     <div className="w-7 h-7 p-[1px] bg-white">
                       <ProfileImage
                         profileImg={user.profileImg}
@@ -121,7 +140,7 @@ function AccountFiles({ folder }: { folder: FolderProps }) {
           </div>
         </div>
       </div>
-      <FolderList activeView={activeView} folders={selectedFolderFiles} />
+      <FolderList activeView={activeView} folders={folder?.children || []} />
     </div>
   );
 }

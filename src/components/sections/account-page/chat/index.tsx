@@ -73,11 +73,11 @@ function Chat() {
         activeChatType={activeChatType}
         toggleChatType={toggleChatType}
       />
-      <div className="flex bg-gray-100 overflow-y-auto bg-lightGray p-1 rounded-lg text-[#1C1C1C] h-full">
+      <div className="flex bg-gray-100 overflow-y-hidden bg-lightGray p-1 rounded-lg text-[#1C1C1C] h-full my-3 max-h-[700px] ">
         <div
           className={`${
             selectedContact ? "hidden md:block" : "block"
-          } w-full md:w-1/3 lg:w-1/4 bg-white p-2 rounded-lg`}
+          } w-full md:w-1/3 lg:w-1/4 bg-white p-2 rounded-lg min-h-full`}
         >
           <div className="bg-lightGray rounded-3xl px-3 py-2 item-center flex gap-2 text-[#1C1C1C] w-full">
             <img src={searchIcon} alt="search" className="w-5 h-5" />

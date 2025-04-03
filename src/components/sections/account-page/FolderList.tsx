@@ -12,7 +12,7 @@ function FolderList({ activeView, folders }: FolderListProps) {
   return (
     <div
       className={`my-6 flex ${
-        activeView === "grid" ? "flex-row gap-4 flex-wrap" : "flex-col"
+        activeView === "grid" ? "flex-row gap-8 flex-wrap" : "flex-col"
       }`}
     >
       {folders.map((item) =>

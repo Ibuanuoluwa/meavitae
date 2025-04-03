@@ -7,7 +7,7 @@ interface AccountTabsProps {
 
 function AccountTabs({ activeTab, toggleTab }: AccountTabsProps) {
   return (
-    <div className="flex px-6 !m-0  overflow-x-auto flex-nowrap">
+    <div className="flex overflow-x-auto flex-nowrap">
       {accountTabData.map((tab) => (
         <button
           className={`flex  gap-2 px-5  border-b-4 border-b-[#F9F8FA] items-center text-[#8D8D8D] text-sm md:text-lg  py-3  ${

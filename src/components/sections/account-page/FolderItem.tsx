@@ -1,6 +1,7 @@
 import React from "react";
 import { FolderProps } from "../../../types/folder";
 import folderGridImg from "../../../assets/images/account-images/folder-grid.png";
+import emptyFolderGridImg from "../../../assets/images/account-images/folder-grid-empty.png";
 import folderListImg from "../../../assets/images/account-images/folder-list.png";
 import emptyFolderListImg from "../../../assets/images/account-images/folder-list-empty.png";
 import { useHistory, useLocation } from "react-router-dom";
@@ -18,21 +19,29 @@ function FolderItem({ activeView, folder }: FolderItemProps) {
   const lastModifiedParts = folder.lastModified?.split(" ") || [];
   const lastModifiedDate = lastModifiedParts[0] || "N/A";
   const lastModifiedTime = lastModifiedParts[1] || "N/A";
+  const isFolderEmpty = !folder.children || folder.children.length === 0;
 
   const folderClickHandler = (id: string) => {
     const searchParams = new URLSearchParams(location.search);
     history.push(`/account/folder/${id}?${searchParams.toString()}`);
   };
+
   return (
-    <div onClick={() => folderClickHandler(folder.id)}>
+    <div
+      onClick={() => folderClickHandler(folder.id)}
+      className="cursor-pointer"
+    >
       {activeView === "grid" ? (
         <div className="w-[217px] h-[173px] relative flex flex-col">
           <div className="absolute w-[217px] h-[173px]">
-            <img src={folderGridImg} alt="folder" className="w-full h-full" />
+            <img
+              src={isFolderEmpty ? emptyFolderGridImg : folderGridImg}
+              alt="folder"
+              className="w-full h-full"
+            />
           </div>
 
-          <div className="flex flex-col px-3 py-6 z-10 justify-between h-full w-full">
-            {/* Shared Users */}
+          <div className="flex flex-col px-3 py-6 z-10 justify-end gap-6 h-full w-full">
             {folder.shared && folder.shared?.length > 0 && (
               <div className="flex -space-x-3 items-center mt-3">
                 {folder.shared.map((item, index) => (
@@ -46,10 +55,9 @@ function FolderItem({ activeView, folder }: FolderItemProps) {
               </div>
             )}
 
-            {/* Folder Metadata */}
             <div className="flex flex-col text-white gap-1">
-              <p>{`${lastModifiedDate} | ${lastModifiedTime}`}</p>
-              <p>{folder.name}</p>
+              <p className="font-normal text-sm">{`${lastModifiedDate} | ${lastModifiedTime}`}</p>
+              <p className="font-medium">{folder.name}</p>
             </div>
           </div>
         </div>
@@ -58,9 +66,7 @@ function FolderItem({ activeView, folder }: FolderItemProps) {
           <div className="flex space-x-3 items-center">
             <div className="h-[26px] w-[32px] relative flex items-center justify-center">
               <img
-                src={
-                  folder.children?.length ? folderListImg : emptyFolderListImg
-                }
+                src={isFolderEmpty ? emptyFolderListImg : folderListImg}
                 alt="folder"
                 className="absolute h-[26px] w-[32px]"
               />
@@ -75,7 +81,7 @@ function FolderItem({ activeView, folder }: FolderItemProps) {
             </div>
             <p className="md:text-base text-sm">{folder.name}</p>
           </div>
-          <p className="text-[#888888]   md:text-sm text-xs">
+          <p className="text-[#888888]  md:text-sm text-xs">
             {lastModifiedDate}
           </p>
         </div>
