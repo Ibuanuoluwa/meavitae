@@ -5,8 +5,13 @@ import {
   AboutPage,
   PartnersPage,
   ArticlesPage,
-  PricingPage
+  PricingPage,
+  RegisterPage,
+  LoginPage,
+  ResetPasswordPage,
 } from "./pages";
+import AccountPage from "./pages/account/AccountPage";
+import AccountFilesPage from "./pages/account/AccountFilesPage";
 
 function AppRoutes() {
   return (
@@ -18,6 +23,15 @@ function AppRoutes() {
         <Route exact path="/partners" component={PartnersPage} />
         <Route exact path="/articles" component={ArticlesPage} />
         <Route exact path="/pricing" component={PricingPage} />
+        <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/reset-password" component={ResetPasswordPage} />
+        <Route exact path="/account" component={AccountPage} />
+        <Route
+          exact
+          path="/account/folder/:folderId"
+          component={AccountFilesPage}
+        />
       </Switch>
     </Router>
   );

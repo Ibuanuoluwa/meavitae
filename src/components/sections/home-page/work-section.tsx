@@ -58,7 +58,7 @@ export function WorkSection() {
               </p>
             </div>
             <div className="w-fit mx-auto">
-              <CustomButton background text="Get Started" />
+              <CustomButton type="primary" text="Get Started" />
             </div>
           </div>
         </div>

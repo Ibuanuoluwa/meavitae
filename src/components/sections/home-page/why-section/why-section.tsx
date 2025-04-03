@@ -18,7 +18,7 @@ export function WhySection() {
         ))}
       </div>
       <div className="w-fit mx-auto">
-        <CustomButton background text="Join Us" />
+        <CustomButton type="primary" text="Join Us" />
       </div>
     </div>
   );

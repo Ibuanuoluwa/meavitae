@@ -55,13 +55,15 @@ export function Navbar() {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <CustomButton background={false} text="Contact Us" />
-          <button className="flex gap-3 items-center py-2 px-4 lg:py-3 lg:px-5 rounded-md md:rounded-lg lg:text-lg text-white bg-purple">
-            <span>Login</span>
-            <span>
-              <img src={rightArrow} alt="arrow" />
-            </span>
-          </button>
+          <p>
+            <a href="/">Contact Us</a>
+          </p>
+          <CustomButton
+            imageSrc={rightArrow}
+            text="Login"
+            type="primary"
+            isReversed
+          />
         </div>
       </NavElements>
     </nav>

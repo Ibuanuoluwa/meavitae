@@ -8,7 +8,7 @@ export function FeatureBanner() {
         simplify your life
       </h1>
       <div className=" md:mt-10 mt-4">
-        <CustomButton background text="Join Now" />
+        <CustomButton text="Join Now" type="primary"  />
       </div>
     </div>
   );

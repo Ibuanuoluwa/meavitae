@@ -1,10 +1,12 @@
-import googleBtn from "../../../assets/icons/google-play-btn.svg";
-import appleBtn from "../../../assets/icons/app-store-btn.svg";
+import CustomButton from "../../common/custom-button";
 import centerImg from "../../../assets/images/hero-images/classroom-workbench.png";
 import leftImg1 from "../../../assets/images/hero-images/shipping-business.png";
 import leftImg2 from "../../../assets/images/hero-images/equipment-job.png";
 import rightImg1 from "../../../assets/images/hero-images/classroom-workbench.png";
 import rightImg2 from "../../../assets/images/hero-images/helicopter-pilot.png";
+import googleIcon from "../../../assets/icons/google-icon.svg";
+import appleIcon from "../../../assets/icons/apple-icon.svg";
+import emailIcon from "../../../assets/icons/email-icon.svg";
 import HeroSvg from "./hero-svg";
 
 export function HeroSection() {
@@ -19,13 +21,14 @@ export function HeroSection() {
           Discover Meavitae, your all-in-one digital vault solution for managing
           life's vital aspects with the highest level of security and privacy
         </p>
-        <div className="flex gap-4 items-center mt-4 md:mt-10">
-          <button className="lg:max-w-none max-w-[150px]">
-            <img src={googleBtn} alt="google play" className="w-full" />
-          </button>
-          <button className="lg:max-w-none max-w-[150px]">
-            <img src={appleBtn} alt="apple store" className="w-full" />
-          </button>
+        <div className="flex flex-col gap-4 w-[60%]">
+          <CustomButton imageSrc={googleIcon} text="Continue with Goggle" />
+          <CustomButton imageSrc={appleIcon} text="Continue with Apple" />
+          <CustomButton
+            imageSrc={emailIcon}
+            text="SignUp with Email"
+            type="primary"
+          />
         </div>
       </div>
       <div className="md:w-[45%] mt-8 md:mt-0">
@@ -33,7 +36,7 @@ export function HeroSection() {
           centerImg={centerImg}
           leftImg1={leftImg1}
           leftImg2={leftImg2}
-          rightImg1={rightImg2}
+          rightImg1={rightImg1}
           rightImg2={rightImg2}
         />
       </div>

@@ -115,7 +115,7 @@ export function FeatureSection() {
         ))}
       </div>
       <div className="md:w-fit mx-auto mt-20">
-        <CustomButton background text="All Features" />
+        <CustomButton type="primary" text="All Features" />
       </div>
     </div>
   );
